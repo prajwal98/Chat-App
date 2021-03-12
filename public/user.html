@@ -1,0 +1,38 @@
+<div class="user" ng-click="onClick($event)" ng-class="{ selected: selected }">
+  <div class="description">
+    <div class="name">
+      {{ user.username }}{{ user.self ? " (yourself)" : "" }}
+    </div>
+    <div class="status">
+      <statusicon connected="user.connected" />{{ status() }}
+    </div>
+  </div>
+  <div ng-if="user.hasNewMessages" class="new-messages">!</div>
+</div>
+
+<style scoped>
+  .selected {
+    background-color: #ffaf00;
+  }
+
+  .user {
+    padding: 10px;
+  }
+
+  .description {
+    display: inline-block;
+  }
+
+  .status {
+    color: #92959e;
+  }
+
+  .new-messages {
+    color: white;
+    background-color: red;
+    width: 20px;
+    border-radius: 5px;
+    text-align: center;
+    float: right;
+  }
+</style>

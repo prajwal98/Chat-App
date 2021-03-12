@@ -1,0 +1,47 @@
+.dropdownmenu{
+	 width: 65%;
+	 float:left;
+	 margin: 0;
+}
+.dropdownmenu input[type="checkbox"]{
+	margin-top: 4px ! important;
+}
+
+.dropdown-menu > li > a {
+	overflow: hidden ! important;
+	cursor: pointer;
+	text-decoration: none !important;
+	color: #b2b2b2;
+	display: block;
+}
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:focus, .dropdown-menu > .active > a:hover {
+	background-color: #EDEDED ! important;
+	color: black ! important;
+}
+.dropdown-menu{
+	
+	position: relative ;
+	/*float: left ! important;*/
+	margin-top: 0px ;
+}
+
+.multiselect-container {
+    position: relative;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: scroll ! important;
+    height: 120px ! important;
+    width: 300px ! important;
+}
+
+.btn {
+	width: 300px ! important;
+}
+
+.multiselect-container > li > a > label
+{
+	padding: 0px 15px 3px 15px ! important;
+	
+}

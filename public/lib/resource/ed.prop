@@ -1,0 +1,9 @@
+{"region":"us-east-1",
+"IdentityPoolId":"us-east-1:603aacea-f27b-407f-a920-7e39ba6437db",
+"UserPoolId":"us-east-1_zRmwlax4P",
+"ClientId":"17p9momljtmhjhu9jvp07oo01v",
+"CIdentityPoolId":"us-east-1:603aacea-f27b-407f-a920-7e39ba6437db",
+"CUserPoolId":"us-east-1_zRmwlax4P",
+"CClientId":"17p9momljtmhjhu9jvp07oo01v",
+"cognitoid":"cognito-idp.us-east-1.amazonaws.com/us-east-1_EK31UTYeY"
+}

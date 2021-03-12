@@ -1,0 +1,205 @@
+<div ng-show="loading" class="loader loader-default is-active"></div>
+<div>
+  <div align="center" style="height: 100%; width: 100%; overflow: hidden">
+    <div class="appbox1" align="center">
+      <img class="appimg" src="lib/Images/App-icon.png" />
+
+      <div>
+        <p
+          style="
+            font-size: 24px;
+            margin: 0px 0 6px 0px;
+            font-family: MyWebFont1;
+            color: #fff;
+            font-weight: bold;
+          "
+        >
+          Admin Dashboard
+        </p>
+      </div>
+      <div>
+        <p
+          style="
+            font-size: 16px;
+            margin: 0px 0 38px 0px;
+            color: #fff;
+            font-family: MyWebFont1;
+          "
+        >
+          Sign in to your account here
+        </p>
+      </div>
+
+      <div>
+        <p
+          ng-if="error == true"
+          style="
+            position: fixed;
+            font-size: 11px;
+            margin: -20px 0 0px 5px;
+            font-family: MyWebFont1;
+            color: red;
+          "
+        >
+          Enter a valid email id
+        </p>
+        <p
+          ng-if="error == 3"
+          style="
+            position: fixed;
+            font-size: 11px;
+            margin: -20px 0 0px 5px;
+            font-family: MyWebFont1;
+            color: red;
+          "
+        >
+          User does not exist!
+        </p>
+        <p
+          ng-if="error == 4"
+          style="
+            position: fixed;
+            font-size: 11px;
+            margin: -20px 0 0px 5px;
+            font-family: MyWebFont1;
+            color: red;
+          "
+        >
+          Invalid username or password!
+        </p>
+        <p
+          ng-if="error == 7"
+          style="
+            position: fixed;
+            font-size: 11px;
+            margin: -20px 0 0px 5px;
+            font-family: MyWebFont1;
+            color: red;
+          "
+        >
+          Please check your internet connection!
+        </p>
+        <p
+          ng-if="error == 5"
+          style="
+            position: fixed;
+            font-size: 11px;
+            margin: -20px 0 0px 5px;
+            font-family: MyWebFont1;
+            color: red;
+          "
+        >
+          Oops! Something went wrong. Please try again in some time
+        </p>
+      </div>
+      <div ng-keypress="myFunct($event)">
+        <input
+          style="background-image: url('lib/Images/nmail.png')"
+          class="orgdet"
+          type="email"
+          ng-model="email"
+          placeholder="Email"
+        />
+      </div>
+      <div>
+        <p
+          ng-if="error == 6"
+          style="
+            position: fixed;
+            font-size: 11px;
+            margin: -20px 0 0px 5px;
+            font-family: MyWebFont1;
+            color: red;
+          "
+        >
+          Please enter password!
+        </p>
+        <p
+          ng-if="error == 2"
+          style="
+            position: fixed;
+            font-size: 11px;
+            margin: -20px 0 0px 5px;
+            font-family: MyWebFont1;
+            color: red;
+          "
+        >
+          Password must be at least 8 characters
+        </p>
+      </div>
+      <div ng-keypress="myFunct($event)">
+        <input
+          style="
+            background-image: url('lib/Images/npwd.png');
+            background-size: 18px auto;
+          "
+          class="orgdet"
+          type="password"
+          ng-model="pwd"
+          placeholder="Password"
+        />
+        <button
+          class="loginforgotpwd"
+          style="margin: -27px -72px 0 0; font-size: 14px; float: right"
+          type="button"
+          ng-click="forgotpwd()"
+        >
+          Forgot password?
+        </button>
+      </div>
+      <br />
+      <div ng-keypress="myFunct($event)">
+        <button
+          class="submit"
+          type="button"
+          style="letter-spacing: 1px"
+          ng-click="logon()"
+        >
+          Login
+        </button>
+      </div>
+      <!-- <div >
+<button class="loginforgotpwd" type="button" ng-click="forgotpwd()">Forgot password?</button>
+
+</div> -->
+    </div>
+  </div>
+</div>
+
+<!--  <div  ng-keypress="myFunct($event)">
+<div class="col-5" align="center" >
+<img class="loginimg" src="lib/Images/EnhanzED.png" > 
+</div>
+<div class="col-7 loginbox" align="center" > 
+<div ng-show="loading" class="loader loader-default is-active"></div>
+<div align=left>
+<p ng-if="error == 1" style="position:fixed;font-size:11px;margin: 0px 0 0px 30px;font-family:MyWebFont1;color:red;">Please Enter a Valid Email Id </p>
+</div>
+<div align=left>
+<p ng-if="error == 3" style="position:fixed;font-size:11px;margin: 0px 0 0px 30px;font-family:MyWebFont1;color:red;">The username or password you entered is incorrect</p>
+</div>
+<div align=left>
+<p ng-if="error == 4" style="position:fixed;font-size:11px;margin: 0px 0 0px 30px;font-family:MyWebFont1;color:red;">Oops! Something went wrong. Please try again in some time</p>
+</div>
+<div >
+<input style="background-image: url('lib/Images/Email.png');" class="loginmail" type="email" ng-model="email" placeholder="Email">
+</div>
+</br>
+</br>
+<div align=left>
+<p ng-if="error1 == 2" style="position:fixed;font-size:11px;margin: -34px 0 0px 30px;font-family:MyWebFont1;color:red;">Password must be at least 8 characters</p>
+</div>
+<div >
+<input style="background-image: url('lib/Images/Password.png');"    class="loginpwd" type="{{inputType}}" ng-model="pwd" placeholder="Password">
+</div>
+</br>
+<div >
+<button class="loginbutton" type="button" ng-click="logon()">Sign In</button>
+
+</div>
+<div >
+<button class="forgotpwd" type="button"  ng-click="forgotpwd();">Forgot Password?</button>
+</div>
+
+</div>
+</div> -->

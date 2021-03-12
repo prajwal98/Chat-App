@@ -1,0 +1,2067 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body {
+  min-height: 100vh;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+  font-family: 'MyWebFont';
+  src: url('lib/font/NunitoSans-SemiBold.ttf') format('truetype');
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.66%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 66.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.66%;
+}
+.col-12 {
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 599px) {
+  /* For Mobiles: */
+  .ng-scope {
+  }
+  body {
+    background-color: #ededed !important;
+  }
+
+  .loginimg {
+    width: 40%;
+    height: auto;
+    vertical-align: middle;
+    margin-left: 45%;
+    margin-top: 55%;
+  }
+  .loginbox {
+    width: 30%;
+    font-family: 'MyWebFont';
+    margin-left: 0%;
+    margin-top: 15%;
+    background-color: white;
+    padding: 80px 30px 12px 30px;
+    vertical-align: 50%;
+  }
+
+  .loginmail {
+    background-image: url('lib/Images/Email.png');
+    font-family: 'MyWebFont';
+    display: inline-block;
+    width: 90%;
+    height: 45px;
+    box-sizing: border-box;
+    border: 0.1px solid #ccc;
+    font-size: 16px;
+    background-color: #ededed;
+    background-position: 2% 50%;
+    background-size: 20px auto;
+    background-repeat: no-repeat;
+    padding: 1px 0px 0px 40px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+  }
+
+  .loginpwd {
+    font-family: 'MyWebFont';
+    width: 90%;
+    height: 45px;
+    box-sizing: border-box;
+    border: 0.1px solid #ccc;
+    font-size: 16px;
+    background-color: #ededed;
+    background-position: 2.5% 50%;
+    background-size: 16px auto;
+    background-repeat: no-repeat;
+    margin-top: -20px;
+    padding: 1px 0px 0px 40px;
+  }
+
+  .loginbutton {
+    font-family: 'MyWebFont';
+    background-color: #f5a138;
+    border: none;
+    color: black;
+    width: 90%;
+    height: 40px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12pt;
+    margin: 1px 0 0 0;
+    color: white;
+  }
+
+  .forgotpwd {
+    /*border: none;*/
+    font-size: 12px;
+    align: middle;
+    background-color: white;
+    font-family: 'MyWebFont';
+    color: black;
+    border: none;
+    margin-top: 15px;
+  }
+
+  .sidenav {
+    font-family: 'MyWebFont';
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+  }
+
+  .sidenavlogo {
+    position: relative;
+    width: 70%;
+    height: auto;
+    margin: 15% 15% 15% 15%;
+    border: none;
+  }
+
+  .sidenav a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #b2b2b2;
+    display: block;
+  }
+
+  .sidenav p {
+    margin: 0;
+    color: #b2b2b2;
+  }
+  .sidenav a:hover {
+    color: #f5a138;
+    text-decoration: none;
+  }
+
+  .activemenu {
+    padding: 8px 8px 8px 20px;
+    border-top: 1px solid #d2d2d2;
+    border-left: 5px solid #f5a138;
+    color: #484848 !important;
+    height: 40px;
+  }
+
+  .inactivemenu {
+    border-top: 1px solid #d2d2d2;
+    padding: 8px 8px 8px 25px;
+    height: 40px;
+  }
+  .sidenavimg {
+    width: 9%;
+    height: 90%;
+    border: none;
+    margin: 0% 10px 0 0;
+  }
+  .sidenav a:hover .sidenavimg:hover {
+    width: 9%;
+    height: 90%;
+    margin: 0 10px 0 0;
+    background-color: #f5a138;
+  }
+
+  .dropdown-content {
+    display: none;
+    margin: -3% 0 0 20.2%;
+    z-index: 1;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    position: fixed;
+  }
+
+  .ung:hover .dropdown-content {
+    display: block;
+  }
+  .ung {
+  }
+  .dropdown-content a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #b2b2b2;
+    display: block;
+  }
+
+  .hovercontent {
+    color: #b2b2b2;
+    display: none;
+    float: right;
+  }
+  .ung:hover .hovercontent {
+    display: block;
+  }
+  .inactivemenu1 {
+    border-top: 1px solid #b2b2b2;
+    padding: 8px 8px 8px 25px;
+  }
+  .content {
+    font-family: 'MyWebFont';
+    width: 80%;
+    float: right;
+  }
+
+  .optionsimg {
+    float: right;
+    width: 15%;
+    height: 90%;
+    border: none;
+    margin: 5px 0 0 0;
+  }
+  .container-fluid .header {
+    background-color: white;
+  }
+  .container-fluid {
+    background-color: #ededed;
+  }
+  .table-bordered > thead > tr > td,
+  .table-bordered > thead > tr > th {
+    border: none !important;
+  }
+  .table-bordered {
+    border: none !important;
+  }
+  .table-condensed > tbody > tr > td,
+  .table-condensed > tbody > tr > th,
+  .table-condensed > tfoot > tr > td,
+  .table-condensed > tfoot > tr > th,
+  .table-condensed > thead > tr > td,
+  .table-condensed > thead > tr > th {
+    padding: 20px 0 20px 20px !important;
+  }
+  th {
+    text-align: left !important;
+    color: #b2b2b2;
+  }
+  tr {
+    color: #b2b2b2;
+  }
+  td {
+    border: none !important;
+  }
+  .odd {
+    background-color: #ededed !important;
+  }
+  .even {
+    background-color: white !important;
+  }
+  .ng-table-counts {
+    display: none !important;
+  }
+
+  .profilepic {
+    width: 7%;
+    height: auto;
+    margin: 0 20px 0 20px;
+  }
+  .tcircle1 {
+    border-radius: 50%;
+    border: 2px solid #f5a138;
+    width: 10px;
+    height: 10px;
+
+    margin: 5px 5px 0px 0px;
+    background-color: #f5a138;
+  }
+
+  .tcircle0 {
+    border: 3px solid #999999;
+    background-color: #999999;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+
+    margin: 5px 5px 0px 00px;
+  }
+  .searchuser {
+    float: right;
+    margin: 0 0 10px 0;
+    font-family: 'MyWebFont';
+    width: 230px;
+    height: 30px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 2px;
+    font-size: 14px;
+    background-color: white;
+    background-position: 00% 75%;
+    background-repeat: no-repeat;
+    overflow: auto;
+    padding-left: 30px;
+    background-size: 30px 28px;
+    color: #767676;
+  }
+  .adduserbutton {
+    border-radius: 2px;
+    float: right;
+    font-family: 'MyWebFont';
+    color: black;
+    border: none;
+    font-size: 14px;
+    margin: 0 10px 10px 10px;
+    width: 150px;
+    height: 30px;
+    background: linear-gradient(to right, #fecf94, #f5a138);
+  }
+  .addusermodal .modal-dialog {
+    font-family: 'MyWebFont';
+    margin-top: 80px !important;
+    width: 850px !important;
+  }
+  .addusermodal .modal-body {
+    font-family: 'MyWebFont';
+    margin: 0px 0px !important;
+    padding: 0px 0px !important;
+  }
+  .addusermodal .modal-header {
+    border: none;
+    background-color: #ededed;
+  }
+  .addusermodal .modal-footer {
+    border: none;
+    background-color: #ededed;
+  }
+  .addpic {
+    color: #b2b2b2;
+    font-family: 'MyWebFont';
+    margin: 15px 0 0 0;
+    padding: 5px 15px;
+    border: none;
+    background-color: white;
+    box-shadow: 0 0 2px #b2b2b2;
+  }
+  .mudiv {
+    font-family: 'MyWebFont';
+    padding: 2px 0 2px 0;
+    overflow: hidden;
+    width: 90%;
+  }
+  .mutitle {
+    padding: 6px 0 0 0;
+    float: left;
+    width: 20%;
+    color: #b2b2b2;
+  }
+
+  .mucolon {
+    padding: 6px 0 0 0;
+    float: left;
+    width: 7%;
+    color: #b2b2b2;
+  }
+  .mutext {
+    color: #b2b2b2;
+    float: left;
+    width: 70%;
+  }
+  .mgtitle {
+    padding: 6px 0 0 0;
+    float: left;
+    width: 17.5%;
+    color: #b2b2b2;
+  }
+  .mgtext {
+    color: #b2b2b2;
+    float: left;
+    width: 82.5%;
+  }
+  input {
+    padding: 6px;
+    border-radius: 0;
+    border: 1px solid #d1d1d1;
+  }
+  .muselect {
+    font-family: 'MyWebFont';
+    padding: 6px 1px !important;
+    color: #b2b2b2;
+    width: 70%;
+    border-radius: 0;
+    padding: 6px;
+    border: 1px solid #d1d1d1;
+    background-color: white;
+    cursor: pointer;
+  }
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 5px;
+    border: 1px solid #dfdfdf;
+    border-radius: 2px;
+    margin-right: 2rem;
+    padding: 1rem;
+    padding-right: 2rem;
+  }
+  .styled-select select {
+    -moz-appearance: none; /* Firefox */
+    -webkit-appearance: none; /* Safari and Chrome */
+    appearance: none;
+  }
+
+  .button1 {
+    border-radius: 2px;
+    font-family: 'MyWebFont';
+    color: black;
+    border: none;
+    font-size: 14px;
+    margin: 0px 30px 0px 0;
+    width: 150px;
+    height: 30px;
+    background: linear-gradient(to right, #fecf94, #f5a138);
+  }
+  .button2 {
+    border-radius: 2px;
+    font-family: 'MyWebFont';
+    color: black;
+    border: 1px solid #d1d1d1;
+    font-size: 14px;
+    margin: 0px 10px 0px 0;
+    width: 150px;
+    height: 30px;
+    background-color: white;
+  }
+  .editbutton {
+    color: #b2b2b2;
+    font-family: 'MyWebFont';
+    width: 80px;
+    padding: 5px 0px;
+    border: none;
+    background-color: white;
+    box-shadow: 0 0 2px #b2b2b2;
+  }
+  .disablebutton {
+    color: #b2b2b2;
+    font-family: 'MyWebFont';
+    width: 100px;
+    padding: 5px 0px;
+    border: none;
+    background-color: white;
+    box-shadow: 0 0 2px #b2b2b2;
+  }
+  input[disabled] {
+    background-color: #ffffff;
+  }
+  .buttonimg {
+    width: 18%;
+    height: 100%;
+    margin: 0 5px 0 0;
+  }
+  .mgroup {
+    color: #b2b2b2;
+    pointer: cursor;
+    width: 21%;
+    height: 220px;
+    float: left;
+    background-color: #ffffff;
+    margin: 12px 2% 5px 2%;
+    border-radius: 10px;
+
+    border: none;
+  }
+  .mgname {
+    height: 50%;
+    overflow: hidden;
+  }
+  .mgpara {
+    margin: 15px 15px 15px 15px;
+  }
+  .mgroup:hover {
+    color: #484848;
+    /*box-shadow: -4px 6px 9px 0px rgba(192,192,192,0.43);*/
+    box-shadow: 0px 0px 10px 5px rgba(192, 192, 192, 0.43);
+  }
+  .mgroup:hover .mgusers {
+    height: 50%;
+    border-radius: 50%;
+    border: 2px solid #b2b2b2;
+    width: 90px;
+    height: 90px;
+  }
+  .mgpara1 {
+    margin: 4px 0 0 0;
+  }
+  .mgusers {
+    height: 50%;
+    border-radius: 50%;
+    border: 2px solid #d2d2d2;
+    width: 90px;
+    height: 90px;
+  }
+  .mgimg {
+    width: 35%;
+    height: auto;
+    margin: 20px 0 0 0;
+  }
+  uib-pagination {
+    color: #b2b2b2;
+  }
+  .pagination > .active > a,
+  .pagination > .active > a:focus,
+  .pagination > .active > a:hover,
+  .pagination > .active > span,
+  .pagination > .active > span:focus,
+  .pagination > .active > span:hover {
+    color: #484848 !important;
+    background-color: #ffffff !important;
+    border-color: #ddd !important;
+    border-bottom: 2px solid #f5a138 !important;
+  }
+  .pagination > li > a,
+  .pagination > li > span {
+    color: #b2b2b2 !important;
+  }
+}
+/* End of mobiles: */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  /* For Tabs: */
+  .ng-scope {
+  }
+  body {
+    background-color: #ededed !important;
+  }
+  .abc {
+    display: none;
+  }
+  .loginimg {
+    width: 40%;
+    height: auto;
+    vertical-align: middle;
+    margin-left: 45%;
+    margin-top: 55%;
+  }
+  .loginbox {
+    width: 30%;
+    font-family: 'MyWebFont';
+    margin-left: 0%;
+    margin-top: 15%;
+    background-color: white;
+    padding: 80px 30px 12px 30px;
+    vertical-align: 50%;
+  }
+
+  .loginmail {
+    background-image: url('lib/Images/Email.png');
+    font-family: 'MyWebFont';
+    display: inline-block;
+    width: 90%;
+    height: 45px;
+    box-sizing: border-box;
+    border: 0.1px solid #ccc;
+    font-size: 16px;
+    background-color: #ededed;
+    background-position: 2% 50%;
+    background-size: 20px auto;
+    background-repeat: no-repeat;
+    padding: 1px 0px 0px 40px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+  }
+
+  .loginpwd {
+    font-family: 'MyWebFont';
+    width: 90%;
+    height: 45px;
+    box-sizing: border-box;
+    border: 0.1px solid #ccc;
+    font-size: 16px;
+    background-color: #ededed;
+    background-position: 2.5% 50%;
+    background-size: 16px auto;
+    background-repeat: no-repeat;
+    margin-top: -20px;
+    padding: 1px 0px 0px 40px;
+  }
+
+  .loginbutton {
+    font-family: 'MyWebFont';
+    background-color: #f5a138;
+    border: none;
+    color: black;
+    width: 90%;
+    height: 40px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12pt;
+    margin: 1px 0 0 0;
+    color: white;
+  }
+
+  .forgotpwd {
+    /*border: none;*/
+    font-size: 12px;
+    align: middle;
+    background-color: white;
+    font-family: 'MyWebFont';
+    color: black;
+    border: none;
+    margin-top: 15px;
+  }
+
+  .sidenav {
+    font-family: 'MyWebFont';
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+  }
+
+  .sidenavlogo {
+    position: relative;
+    width: 70%;
+    height: auto;
+    margin: 15% 15% 15% 15%;
+    border: none;
+  }
+
+  .sidenav a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #b2b2b2;
+    display: block;
+  }
+
+  .sidenav p {
+    margin: 0;
+    color: #b2b2b2;
+  }
+  .sidenav a:hover {
+    color: #f5a138;
+    text-decoration: none;
+  }
+
+  .activemenu {
+    padding: 8px 8px 8px 20px;
+    border-top: 1px solid #d2d2d2;
+    border-left: 5px solid #f5a138;
+    color: #484848 !important;
+    height: 40px;
+  }
+
+  .inactivemenu {
+    border-top: 1px solid #d2d2d2;
+    padding: 8px 8px 8px 25px;
+    height: 40px;
+  }
+  .sidenavimg {
+    width: 9%;
+    height: 90%;
+    border: none;
+    margin: 0% 10px 0 0;
+  }
+  .sidenav a:hover .sidenavimg:hover {
+    width: 9%;
+    height: 90%;
+    margin: 0 10px 0 0;
+    background-color: #f5a138;
+  }
+
+  .dropdown-content {
+    display: none;
+    margin: -3% 0 0 20.2%;
+    z-index: 1;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    position: fixed;
+  }
+
+  .ung:hover .dropdown-content {
+    display: block;
+  }
+  .ung {
+  }
+  .dropdown-content a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #b2b2b2;
+    display: block;
+  }
+
+  .hovercontent {
+    color: #b2b2b2;
+    display: none;
+    float: right;
+  }
+  .ung:hover .hovercontent {
+    display: block;
+  }
+  .inactivemenu1 {
+    border-top: 1px solid #b2b2b2;
+    padding: 8px 8px 8px 25px;
+  }
+  .content {
+    font-family: 'MyWebFont';
+    width: 80%;
+    float: right;
+  }
+
+  .optionsimg {
+    float: right;
+    width: 15%;
+    height: 90%;
+    border: none;
+    margin: 5px 0 0 0;
+  }
+  .container-fluid .header {
+    background-color: white;
+  }
+  .container-fluid {
+    background-color: #ededed;
+  }
+  .table-bordered > thead > tr > td,
+  .table-bordered > thead > tr > th {
+    border: none !important;
+  }
+  .table-bordered {
+    border: none !important;
+  }
+  .table-condensed > tbody > tr > td,
+  .table-condensed > tbody > tr > th,
+  .table-condensed > tfoot > tr > td,
+  .table-condensed > tfoot > tr > th,
+  .table-condensed > thead > tr > td,
+  .table-condensed > thead > tr > th {
+    padding: 20px 0 20px 20px !important;
+  }
+  th {
+    text-align: left !important;
+    color: #b2b2b2;
+  }
+  tr {
+    color: #b2b2b2;
+  }
+  td {
+    border: none !important;
+  }
+  .odd {
+    background-color: #ededed !important;
+  }
+  .even {
+    background-color: white !important;
+  }
+  .ng-table-counts {
+    display: none !important;
+  }
+
+  .profilepic {
+    width: 7%;
+    height: auto;
+    margin: 0 20px 0 20px;
+  }
+  .tcircle1 {
+    border-radius: 50%;
+    border: 2px solid #f5a138;
+    width: 10px;
+    height: 10px;
+
+    margin: 5px 5px 0px 0px;
+    background-color: #f5a138;
+  }
+
+  .tcircle0 {
+    border: 3px solid #999999;
+    background-color: #999999;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+
+    margin: 5px 5px 0px 00px;
+  }
+  .searchuser {
+    float: right;
+    margin: 0 0 10px 0;
+    font-family: 'MyWebFont';
+    width: 230px;
+    height: 30px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 2px;
+    font-size: 14px;
+    background-color: white;
+    background-position: 00% 75%;
+    background-repeat: no-repeat;
+    overflow: auto;
+    padding-left: 30px;
+    background-size: 30px 28px;
+    color: #767676;
+  }
+  .adduserbutton {
+    border-radius: 2px;
+    float: right;
+    font-family: 'MyWebFont';
+    color: black;
+    border: none;
+    font-size: 14px;
+    margin: 0 10px 10px 10px;
+    width: 150px;
+    height: 30px;
+    background: linear-gradient(to right, #fecf94, #f5a138);
+  }
+  .addusermodal .modal-dialog {
+    font-family: 'MyWebFont';
+    margin-top: 80px !important;
+    width: 850px !important;
+  }
+  .addusermodal .modal-body {
+    font-family: 'MyWebFont';
+    margin: 0px 0px !important;
+    padding: 0px 0px !important;
+  }
+  .addusermodal .modal-header {
+    border: none;
+    background-color: #ededed;
+  }
+  .addusermodal .modal-footer {
+    border: none;
+    background-color: #ededed;
+  }
+  .addpic {
+    color: #b2b2b2;
+    font-family: 'MyWebFont';
+    margin: 15px 0 0 0;
+    padding: 5px 15px;
+    border: none;
+    background-color: white;
+    box-shadow: 0 0 2px #b2b2b2;
+  }
+  .mudiv {
+    font-family: 'MyWebFont';
+    padding: 2px 0 2px 0;
+    overflow: hidden;
+    width: 90%;
+  }
+  .mutitle {
+    padding: 6px 0 0 0;
+    float: left;
+    width: 20%;
+    color: #b2b2b2;
+  }
+
+  .mucolon {
+    padding: 6px 0 0 0;
+    float: left;
+    width: 7%;
+    color: #b2b2b2;
+  }
+  .mutext {
+    color: #b2b2b2;
+    float: left;
+    width: 70%;
+  }
+  .mgtitle {
+    padding: 6px 0 0 0;
+    float: left;
+    width: 17.5%;
+    color: #b2b2b2;
+  }
+  .mgtext {
+    color: #b2b2b2;
+    float: left;
+    width: 82.5%;
+  }
+  input {
+    padding: 6px;
+    border-radius: 0;
+    border: 1px solid #d1d1d1;
+  }
+  .muselect {
+    font-family: 'MyWebFont';
+    padding: 6px 1px !important;
+    color: #b2b2b2;
+    width: 70%;
+    border-radius: 0;
+    padding: 6px;
+    border: 1px solid #d1d1d1;
+    background-color: white;
+    cursor: pointer;
+  }
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 5px;
+    border: 1px solid #dfdfdf;
+    border-radius: 2px;
+    margin-right: 2rem;
+    padding: 1rem;
+    padding-right: 2rem;
+  }
+  .styled-select select {
+    -moz-appearance: none; /* Firefox */
+    -webkit-appearance: none; /* Safari and Chrome */
+    appearance: none;
+  }
+
+  .button1 {
+    border-radius: 2px;
+    font-family: 'MyWebFont';
+    color: black;
+    border: none;
+    font-size: 14px;
+    margin: 0px 30px 0px 0;
+    width: 150px;
+    height: 30px;
+    background: linear-gradient(to right, #fecf94, #f5a138);
+  }
+  .button2 {
+    border-radius: 2px;
+    font-family: 'MyWebFont';
+    color: black;
+    border: 1px solid #d1d1d1;
+    font-size: 14px;
+    margin: 0px 10px 0px 0;
+    width: 150px;
+    height: 30px;
+    background-color: white;
+  }
+  .editbutton {
+    color: #b2b2b2;
+    font-family: 'MyWebFont';
+    width: 80px;
+    padding: 5px 0px;
+    border: none;
+    background-color: white;
+    box-shadow: 0 0 2px #b2b2b2;
+  }
+  .disablebutton {
+    color: #b2b2b2;
+    font-family: 'MyWebFont';
+    width: 100px;
+    padding: 5px 0px;
+    border: none;
+    background-color: white;
+    box-shadow: 0 0 2px #b2b2b2;
+  }
+  input[disabled] {
+    background-color: #ffffff;
+  }
+  .buttonimg {
+    width: 18%;
+    height: 100%;
+    margin: 0 5px 0 0;
+  }
+  .mgroup {
+    color: #b2b2b2;
+    pointer: cursor;
+    width: 21%;
+    height: 220px;
+    float: left;
+    background-color: #ffffff;
+    margin: 12px 2% 5px 2%;
+    border-radius: 10px;
+
+    border: none;
+  }
+  .mgname {
+    height: 50%;
+    overflow: hidden;
+  }
+  .mgpara {
+    margin: 15px 15px 15px 15px;
+  }
+  .mgroup:hover {
+    color: #484848;
+    /*box-shadow: -4px 6px 9px 0px rgba(192,192,192,0.43);*/
+    box-shadow: 0px 0px 10px 5px rgba(192, 192, 192, 0.43);
+  }
+  .mgroup:hover .mgusers {
+    height: 50%;
+    border-radius: 50%;
+    border: 2px solid #b2b2b2;
+    width: 90px;
+    height: 90px;
+  }
+  .mgpara1 {
+    margin: 4px 0 0 0;
+  }
+  .mgusers {
+    height: 50%;
+    border-radius: 50%;
+    border: 2px solid #d2d2d2;
+    width: 90px;
+    height: 90px;
+  }
+  .mgimg {
+    width: 35%;
+    height: auto;
+    margin: 20px 0 0 0;
+  }
+  uib-pagination {
+    color: #b2b2b2;
+  }
+  .pagination > .active > a,
+  .pagination > .active > a:focus,
+  .pagination > .active > a:hover,
+  .pagination > .active > span,
+  .pagination > .active > span:focus,
+  .pagination > .active > span:hover {
+    color: #484848 !important;
+    background-color: #ffffff !important;
+    border-color: #ddd !important;
+    border-bottom: 2px solid #f5a138 !important;
+  }
+  .pagination > li > a,
+  .pagination > li > span {
+    color: #b2b2b2 !important;
+  }
+}
+/*End of tabs*/
+@media screen and (min-width: 1025px) and (max-width: 1400px) {
+  /* For Desktop: */
+
+  .ng-scope {
+  }
+  body {
+    background-color: #ededed !important;
+  }
+
+  .loginimg {
+    width: 40%;
+    height: auto;
+    vertical-align: middle;
+    margin-left: 45%;
+    margin-top: 55%;
+  }
+  .loginbox {
+    width: 30%;
+    font-family: 'MyWebFont';
+    margin-left: 0%;
+    margin-top: 15%;
+    background-color: white;
+    padding: 80px 30px 12px 30px;
+    vertical-align: 50%;
+  }
+
+  .loginmail {
+    background-image: url('lib/Images/Email.png');
+    font-family: 'MyWebFont';
+    display: inline-block;
+    width: 90%;
+    height: 45px;
+    box-sizing: border-box;
+    border: 0.1px solid #ccc;
+    font-size: 16px;
+    background-color: #ededed;
+    background-position: 2% 50%;
+    background-size: 20px auto;
+    background-repeat: no-repeat;
+    padding: 1px 0px 0px 40px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+  }
+
+  .loginpwd {
+    font-family: 'MyWebFont';
+    width: 90%;
+    height: 45px;
+    box-sizing: border-box;
+    border: 0.1px solid #ccc;
+    font-size: 16px;
+    background-color: #ededed;
+    background-position: 2.5% 50%;
+    background-size: 16px auto;
+    background-repeat: no-repeat;
+    margin-top: -20px;
+    padding: 1px 0px 0px 40px;
+  }
+
+  .loginbutton {
+    font-family: 'MyWebFont';
+    background-color: #f5a138;
+    border: none;
+    color: black;
+    width: 90%;
+    height: 40px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12pt;
+    margin: 1px 0 0 0;
+    color: white;
+  }
+
+  .forgotpwd {
+    /*border: none;*/
+    font-size: 12px;
+    align: middle;
+    background-color: white;
+    font-family: 'MyWebFont';
+    color: black;
+    border: none;
+    margin-top: 15px;
+  }
+
+  .sidenav {
+    font-family: 'MyWebFont';
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+  }
+
+  .sidenavlogo {
+    position: relative;
+    width: 70%;
+    height: auto;
+    margin: 15% 15% 15% 15%;
+    border: none;
+  }
+
+  .sidenav a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #b2b2b2;
+    display: block;
+  }
+
+  .sidenav p {
+    margin: 0;
+    color: #b2b2b2;
+  }
+  .sidenav a:hover {
+    color: #f5a138;
+    text-decoration: none;
+  }
+
+  .activemenu {
+    padding: 8px 8px 8px 20px;
+    border-top: 1px solid #d2d2d2;
+    border-left: 5px solid #f5a138;
+    color: #484848 !important;
+    height: 40px;
+  }
+
+  .inactivemenu {
+    border-top: 1px solid #d2d2d2;
+    padding: 8px 8px 8px 25px;
+    height: 40px;
+  }
+  .sidenavimg {
+    width: 9%;
+    height: 90%;
+    border: none;
+    margin: 0% 10px 0 0;
+  }
+  .sidenav a:hover .sidenavimg:hover {
+    width: 9%;
+    height: 90%;
+    margin: 0 10px 0 0;
+    background-color: #f5a138;
+  }
+
+  .dropdown-content {
+    display: none;
+    margin: -3% 0 0 20.2%;
+    z-index: 1;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    position: fixed;
+  }
+
+  .ung:hover .dropdown-content {
+    display: block;
+  }
+  .ung {
+  }
+  .dropdown-content a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #b2b2b2;
+    display: block;
+  }
+
+  .hovercontent {
+    color: #b2b2b2;
+    display: none;
+    float: right;
+  }
+  .ung:hover .hovercontent {
+    display: block;
+  }
+  .inactivemenu1 {
+    border-top: 1px solid #b2b2b2;
+    padding: 8px 8px 8px 25px;
+  }
+  .content {
+    font-family: 'MyWebFont';
+    width: 80%;
+    float: right;
+  }
+
+  .optionsimg {
+    float: right;
+    width: 15%;
+    height: 90%;
+    border: none;
+    margin: 5px 0 0 0;
+  }
+  .container-fluid .header {
+    background-color: white;
+  }
+  .container-fluid {
+    background-color: #ededed;
+  }
+  .table-bordered > thead > tr > td,
+  .table-bordered > thead > tr > th {
+    border: none !important;
+  }
+  .table-bordered {
+    border: none !important;
+  }
+  .table-condensed > tbody > tr > td,
+  .table-condensed > tbody > tr > th,
+  .table-condensed > tfoot > tr > td,
+  .table-condensed > tfoot > tr > th,
+  .table-condensed > thead > tr > td,
+  .table-condensed > thead > tr > th {
+    padding: 20px 0 20px 20px !important;
+  }
+  th {
+    text-align: left !important;
+    color: #b2b2b2;
+  }
+  tr {
+    color: #b2b2b2;
+  }
+  td {
+    border: none !important;
+  }
+  .odd {
+    background-color: #ededed !important;
+  }
+  .even {
+    background-color: white !important;
+  }
+  .ng-table-counts {
+    display: none !important;
+  }
+
+  .profilepic {
+    width: 7%;
+    height: auto;
+    margin: 0 20px 0 20px;
+  }
+  .tcircle1 {
+    border-radius: 50%;
+    border: 2px solid #f5a138;
+    width: 10px;
+    height: 10px;
+
+    margin: 5px 5px 0px 0px;
+    background-color: #f5a138;
+  }
+
+  .tcircle0 {
+    border: 3px solid #999999;
+    background-color: #999999;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+
+    margin: 5px 5px 0px 00px;
+  }
+  .searchuser {
+    float: right;
+    margin: 0 0 10px 0;
+    font-family: 'MyWebFont';
+    width: 230px;
+    height: 30px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 2px;
+    font-size: 14px;
+    background-color: white;
+    background-position: 00% 75%;
+    background-repeat: no-repeat;
+    overflow: auto;
+    padding-left: 30px;
+    background-size: 30px 28px;
+    color: #767676;
+  }
+  .adduserbutton {
+    border-radius: 2px;
+    float: right;
+    font-family: 'MyWebFont';
+    color: black;
+    border: none;
+    font-size: 14px;
+    margin: 0 10px 10px 10px;
+    width: 150px;
+    height: 30px;
+    background: linear-gradient(to right, #fecf94, #f5a138);
+  }
+  .addusermodal .modal-dialog {
+    font-family: 'MyWebFont';
+    margin-top: 80px !important;
+    width: 850px !important;
+  }
+  .addusermodal .modal-body {
+    font-family: 'MyWebFont';
+    margin: 0px 0px !important;
+    padding: 0px 0px !important;
+  }
+  .addusermodal .modal-header {
+    border: none;
+    background-color: #ededed;
+  }
+  .addusermodal .modal-footer {
+    border: none;
+    background-color: #ededed;
+  }
+  .addpic {
+    color: #b2b2b2;
+    font-family: 'MyWebFont';
+    margin: 15px 0 0 0;
+    padding: 5px 15px;
+    border: none;
+    background-color: white;
+    box-shadow: 0 0 2px #b2b2b2;
+  }
+  .mudiv {
+    font-family: 'MyWebFont';
+    padding: 2px 0 2px 0;
+    overflow: hidden;
+    width: 90%;
+  }
+  .mutitle {
+    padding: 6px 0 0 0;
+    float: left;
+    width: 20%;
+    color: #b2b2b2;
+  }
+
+  .mucolon {
+    padding: 6px 0 0 0;
+    float: left;
+    width: 7%;
+    color: #b2b2b2;
+  }
+  .mutext {
+    color: #b2b2b2;
+    float: left;
+    width: 70%;
+  }
+  .mgtitle {
+    padding: 6px 0 0 0;
+    float: left;
+    width: 17.5%;
+    color: #b2b2b2;
+  }
+  .mgtext {
+    color: #b2b2b2;
+    float: left;
+    width: 82.5%;
+  }
+  input {
+    padding: 6px;
+    border-radius: 0;
+    border: 1px solid #d1d1d1;
+  }
+  .muselect {
+    font-family: 'MyWebFont';
+    padding: 6px 1px !important;
+    color: #b2b2b2;
+    width: 70%;
+    border-radius: 0;
+    padding: 6px;
+    border: 1px solid #d1d1d1;
+    background-color: white;
+    cursor: pointer;
+  }
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 5px;
+    border: 1px solid #dfdfdf;
+    border-radius: 2px;
+    margin-right: 2rem;
+    padding: 1rem;
+    padding-right: 2rem;
+  }
+  .styled-select select {
+    -moz-appearance: none; /* Firefox */
+    -webkit-appearance: none; /* Safari and Chrome */
+    appearance: none;
+  }
+
+  .button1 {
+    border-radius: 2px;
+    font-family: 'MyWebFont';
+    color: black;
+    border: none;
+    font-size: 14px;
+    margin: 0px 30px 0px 0;
+    width: 150px;
+    height: 30px;
+    background: linear-gradient(to right, #fecf94, #f5a138);
+  }
+  .button2 {
+    border-radius: 2px;
+    font-family: 'MyWebFont';
+    color: black;
+    border: 1px solid #d1d1d1;
+    font-size: 14px;
+    margin: 0px 10px 0px 0;
+    width: 150px;
+    height: 30px;
+    background-color: white;
+  }
+  .editbutton {
+    color: #b2b2b2;
+    font-family: 'MyWebFont';
+    width: 80px;
+    padding: 5px 0px;
+    border: none;
+    background-color: white;
+    box-shadow: 0 0 2px #b2b2b2;
+  }
+  .disablebutton {
+    color: #b2b2b2;
+    font-family: 'MyWebFont';
+    width: 100px;
+    padding: 5px 0px;
+    border: none;
+    background-color: white;
+    box-shadow: 0 0 2px #b2b2b2;
+  }
+  input[disabled] {
+    background-color: #ffffff;
+  }
+  .buttonimg {
+    width: 18%;
+    height: 100%;
+    margin: 0 5px 0 0;
+  }
+  .mgroup {
+    color: #b2b2b2;
+    pointer: cursor;
+    width: 21%;
+    height: 220px;
+    float: left;
+    background-color: #ffffff;
+    margin: 12px 2% 5px 2%;
+    border-radius: 10px;
+
+    border: none;
+  }
+  .mgname {
+    height: 50%;
+    overflow: hidden;
+  }
+  .mgpara {
+    margin: 15px 15px 15px 15px;
+  }
+  .mgroup:hover {
+    color: #484848;
+    /*box-shadow: -4px 6px 9px 0px rgba(192,192,192,0.43);*/
+    box-shadow: 0px 0px 10px 5px rgba(192, 192, 192, 0.43);
+  }
+  .mgroup:hover .mgusers {
+    height: 50%;
+    border-radius: 50%;
+    border: 2px solid #b2b2b2;
+    width: 90px;
+    height: 90px;
+  }
+  .mgpara1 {
+    margin: 4px 0 0 0;
+  }
+  .mgusers {
+    height: 50%;
+    border-radius: 50%;
+    border: 2px solid #d2d2d2;
+    width: 90px;
+    height: 90px;
+  }
+  .mgimg {
+    width: 35%;
+    height: auto;
+    margin: 20px 0 0 0;
+  }
+  uib-pagination {
+    color: #b2b2b2;
+  }
+  .pagination > .active > a,
+  .pagination > .active > a:focus,
+  .pagination > .active > a:hover,
+  .pagination > .active > span,
+  .pagination > .active > span:focus,
+  .pagination > .active > span:hover {
+    color: #484848 !important;
+    background-color: #ffffff !important;
+    border-color: #ddd !important;
+    border-bottom: 2px solid #f5a138 !important;
+  }
+  .pagination > li > a,
+  .pagination > li > span {
+    color: #b2b2b2 !important;
+  }
+}
+/* End of desktop*/
+
+@media screen and (min-width: 1400px) {
+  /* For large screens*/
+  .ng-scope {
+  }
+  body {
+    background-color: #ededed !important;
+  }
+
+  .loginimg {
+    width: 40%;
+    height: auto;
+    vertical-align: middle;
+    margin-left: 45%;
+    margin-top: 55%;
+  }
+  .loginbox {
+    width: 30%;
+    font-family: 'MyWebFont';
+    margin-left: 0%;
+    margin-top: 15%;
+    background-color: white;
+    padding: 80px 30px 12px 30px;
+    vertical-align: 50%;
+  }
+
+  .loginmail {
+    background-image: url('lib/Images/Email.png');
+    font-family: 'MyWebFont';
+    display: inline-block;
+    width: 90%;
+    height: 45px;
+    box-sizing: border-box;
+    border: 0.1px solid #ccc;
+    font-size: 16px;
+    background-color: #ededed;
+    background-position: 2% 50%;
+    background-size: 20px auto;
+    background-repeat: no-repeat;
+    padding: 1px 0px 0px 40px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+  }
+
+  .loginpwd {
+    font-family: 'MyWebFont';
+    width: 90%;
+    height: 45px;
+    box-sizing: border-box;
+    border: 0.1px solid #ccc;
+    font-size: 16px;
+    background-color: #ededed;
+    background-position: 2.5% 50%;
+    background-size: 16px auto;
+    background-repeat: no-repeat;
+    margin-top: -20px;
+    padding: 1px 0px 0px 40px;
+  }
+
+  .loginbutton {
+    font-family: 'MyWebFont';
+    background-color: #f5a138;
+    border: none;
+    color: black;
+    width: 90%;
+    height: 40px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12pt;
+    margin: 1px 0 0 0;
+    color: white;
+  }
+
+  .forgotpwd {
+    /*border: none;*/
+    font-size: 12px;
+    align: middle;
+    background-color: white;
+    font-family: 'MyWebFont';
+    color: black;
+    border: none;
+    margin-top: 15px;
+  }
+
+  .sidenav {
+    font-family: 'MyWebFont';
+    height: 100%;
+    width: 20%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+  }
+
+  .sidenavlogo {
+    position: relative;
+    width: 70%;
+    height: auto;
+    margin: 15% 15% 15% 15%;
+    border: none;
+  }
+
+  .sidenav a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #b2b2b2;
+    display: block;
+  }
+
+  .sidenav p {
+    margin: 0;
+    color: #b2b2b2;
+  }
+  .sidenav a:hover {
+    color: #f5a138;
+    text-decoration: none;
+  }
+
+  .activemenu {
+    padding: 8px 8px 8px 20px;
+    border-top: 1px solid #d2d2d2;
+    border-left: 5px solid #f5a138;
+    color: #484848 !important;
+    height: 40px;
+  }
+
+  .inactivemenu {
+    border-top: 1px solid #d2d2d2;
+    padding: 8px 8px 8px 25px;
+    height: 40px;
+  }
+  .sidenavimg {
+    width: 9%;
+    height: 90%;
+    border: none;
+    margin: 0% 10px 0 0;
+  }
+  .sidenav a:hover .sidenavimg:hover {
+    width: 9%;
+    height: 90%;
+    margin: 0 10px 0 0;
+    background-color: #f5a138;
+  }
+
+  .dropdown-content {
+    display: none;
+    margin: -3% 0 0 20.2%;
+    z-index: 1;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    position: fixed;
+  }
+
+  .ung:hover .dropdown-content {
+    display: block;
+  }
+  .ung {
+  }
+  .dropdown-content a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #b2b2b2;
+    display: block;
+  }
+
+  .hovercontent {
+    color: #b2b2b2;
+    display: none;
+    float: right;
+  }
+  .ung:hover .hovercontent {
+    display: block;
+  }
+  .inactivemenu1 {
+    border-top: 1px solid #b2b2b2;
+    padding: 8px 8px 8px 25px;
+  }
+  .content {
+    font-family: 'MyWebFont';
+    width: 80%;
+    float: right;
+  }
+
+  .optionsimg {
+    float: right;
+    width: 15%;
+    height: 90%;
+    border: none;
+    margin: 5px 0 0 0;
+  }
+  .container-fluid .header {
+    background-color: white;
+  }
+  .container-fluid {
+    background-color: #ededed;
+  }
+  .table-bordered > thead > tr > td,
+  .table-bordered > thead > tr > th {
+    border: none !important;
+  }
+  .table-bordered {
+    border: none !important;
+  }
+  .table-condensed > tbody > tr > td,
+  .table-condensed > tbody > tr > th,
+  .table-condensed > tfoot > tr > td,
+  .table-condensed > tfoot > tr > th,
+  .table-condensed > thead > tr > td,
+  .table-condensed > thead > tr > th {
+    padding: 20px 0 20px 20px !important;
+  }
+  th {
+    text-align: left !important;
+    color: #b2b2b2;
+  }
+  tr {
+    color: #b2b2b2;
+  }
+  td {
+    border: none !important;
+  }
+  .odd {
+    background-color: #ededed !important;
+  }
+  .even {
+    background-color: white !important;
+  }
+  .ng-table-counts {
+    display: none !important;
+  }
+
+  .profilepic {
+    width: 7%;
+    height: auto;
+    margin: 0 20px 0 20px;
+  }
+  .tcircle1 {
+    border-radius: 50%;
+    border: 2px solid #f5a138;
+    width: 10px;
+    height: 10px;
+
+    margin: 5px 5px 0px 0px;
+    background-color: #f5a138;
+  }
+
+  .tcircle0 {
+    border: 3px solid #999999;
+    background-color: #999999;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+
+    margin: 5px 5px 0px 00px;
+  }
+  .searchuser {
+    float: right;
+    margin: 0 0 10px 0;
+    font-family: 'MyWebFont';
+    width: 230px;
+    height: 30px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 2px;
+    font-size: 14px;
+    background-color: white;
+    background-position: 00% 75%;
+    background-repeat: no-repeat;
+    overflow: auto;
+    padding-left: 30px;
+    background-size: 30px 28px;
+    color: #767676;
+  }
+  .adduserbutton {
+    border-radius: 2px;
+    float: right;
+    font-family: 'MyWebFont';
+    color: black;
+    border: none;
+    font-size: 14px;
+    margin: 0 10px 10px 10px;
+    width: 150px;
+    height: 30px;
+    background: linear-gradient(to right, #fecf94, #f5a138);
+  }
+  .addusermodal .modal-dialog {
+    font-family: 'MyWebFont';
+    margin-top: 80px !important;
+    width: 850px !important;
+  }
+  .addusermodal .modal-body {
+    font-family: 'MyWebFont';
+    margin: 0px 0px !important;
+    padding: 0px 0px !important;
+  }
+  .addusermodal .modal-header {
+    border: none;
+    background-color: #ededed;
+  }
+  .addusermodal .modal-footer {
+    border: none;
+    background-color: #ededed;
+  }
+  .addpic {
+    color: #b2b2b2;
+    font-family: 'MyWebFont';
+    margin: 15px 0 0 0;
+    padding: 5px 15px;
+    border: none;
+    background-color: white;
+    box-shadow: 0 0 2px #b2b2b2;
+  }
+  .mudiv {
+    font-family: 'MyWebFont';
+    padding: 2px 0 2px 0;
+    overflow: hidden;
+    width: 90%;
+  }
+  .mutitle {
+    padding: 6px 0 0 0;
+    float: left;
+    width: 20%;
+    color: #b2b2b2;
+  }
+
+  .mucolon {
+    padding: 6px 0 0 0;
+    float: left;
+    width: 7%;
+    color: #b2b2b2;
+  }
+  .mutext {
+    color: #b2b2b2;
+    float: left;
+    width: 70%;
+  }
+  .mgtitle {
+    padding: 6px 0 0 0;
+    float: left;
+    width: 17.5%;
+    color: #b2b2b2;
+  }
+  .mgtext {
+    color: #b2b2b2;
+    float: left;
+    width: 82.5%;
+  }
+  input {
+    padding: 6px;
+    border-radius: 0;
+    border: 1px solid #d1d1d1;
+  }
+  .muselect {
+    font-family: 'MyWebFont';
+    padding: 6px 1px !important;
+    color: #b2b2b2;
+    width: 70%;
+    border-radius: 0;
+    padding: 6px;
+    border: 1px solid #d1d1d1;
+    background-color: white;
+    cursor: pointer;
+  }
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 5px;
+    border: 1px solid #dfdfdf;
+    border-radius: 2px;
+    margin-right: 2rem;
+    padding: 1rem;
+    padding-right: 2rem;
+  }
+  .styled-select select {
+    -moz-appearance: none; /* Firefox */
+    -webkit-appearance: none; /* Safari and Chrome */
+    appearance: none;
+  }
+
+  .button1 {
+    border-radius: 2px;
+    font-family: 'MyWebFont';
+    color: black;
+    border: none;
+    font-size: 14px;
+    margin: 0px 30px 0px 0;
+    width: 150px;
+    height: 30px;
+    background: linear-gradient(to right, #fecf94, #f5a138);
+  }
+  .button2 {
+    border-radius: 2px;
+    font-family: 'MyWebFont';
+    color: black;
+    border: 1px solid #d1d1d1;
+    font-size: 14px;
+    margin: 0px 10px 0px 0;
+    width: 150px;
+    height: 30px;
+    background-color: white;
+  }
+  .editbutton {
+    color: #b2b2b2;
+    font-family: 'MyWebFont';
+    width: 80px;
+    padding: 5px 0px;
+    border: none;
+    background-color: white;
+    box-shadow: 0 0 2px #b2b2b2;
+  }
+  .disablebutton {
+    color: #b2b2b2;
+    font-family: 'MyWebFont';
+    width: 100px;
+    padding: 5px 0px;
+    border: none;
+    background-color: white;
+    box-shadow: 0 0 2px #b2b2b2;
+  }
+  input[disabled] {
+    background-color: #ffffff;
+  }
+  .buttonimg {
+    width: 18%;
+    height: 100%;
+    margin: 0 5px 0 0;
+  }
+  .mgroup {
+    color: #b2b2b2;
+    pointer: cursor;
+    width: 21%;
+    height: 220px;
+    float: left;
+    background-color: #ffffff;
+    margin: 12px 2% 5px 2%;
+    border-radius: 10px;
+
+    border: none;
+  }
+  .mgname {
+    height: 50%;
+    overflow: hidden;
+  }
+  .mgpara {
+    margin: 15px 15px 15px 15px;
+  }
+  .mgroup:hover {
+    color: #484848;
+    /*box-shadow: -4px 6px 9px 0px rgba(192,192,192,0.43);*/
+    box-shadow: 0px 0px 10px 5px rgba(192, 192, 192, 0.43);
+  }
+  .mgroup:hover .mgusers {
+    height: 50%;
+    border-radius: 50%;
+    border: 2px solid #b2b2b2;
+    width: 90px;
+    height: 90px;
+  }
+  .mgpara1 {
+    margin: 4px 0 0 0;
+  }
+  .mgusers {
+    height: 50%;
+    border-radius: 50%;
+    border: 2px solid #d2d2d2;
+    width: 90px;
+    height: 90px;
+  }
+  .mgimg {
+    width: 35%;
+    height: auto;
+    margin: 20px 0 0 0;
+  }
+  uib-pagination {
+    color: #b2b2b2;
+  }
+  .pagination > .active > a,
+  .pagination > .active > a:focus,
+  .pagination > .active > a:hover,
+  .pagination > .active > span,
+  .pagination > .active > span:focus,
+  .pagination > .active > span:hover {
+    color: #484848 !important;
+    background-color: #ffffff !important;
+    border-color: #ddd !important;
+    border-bottom: 2px solid #f5a138 !important;
+  }
+  .pagination > li > a,
+  .pagination > li > span {
+    color: #b2b2b2 !important;
+  }
+}
+/* End of large screens*/
+
+[class*='col-'] {
+  float: left;
+  padding: 15px;
+}

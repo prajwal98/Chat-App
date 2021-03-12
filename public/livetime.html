@@ -1,0 +1,23 @@
+<div class="group-container">
+  <div>
+    <div class="right-panel" id="panel">
+      <user
+        ng-repeat="user in users"
+        key="user.userID"
+        user="user"
+        selected="selectedUser === user"
+        ng-click="onSelectUser(user)"
+      />
+    </div>
+
+    <div class="left-panel" id="msg-panel">
+      <messagepanel
+        ng-if="selectedUser"
+        user="selectedUser"
+        class="left-panel"
+      />
+      {{message}}
+    </div>
+    <div ng-repeat="user in users">{{user}}</div>
+  </div>
+</div>
