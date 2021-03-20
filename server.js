@@ -11,6 +11,9 @@ const randomId = () => crypto.randomBytes(8).toString("hex");
 const { InMemorySessionStore } = require("./sessionStore");
 const sessionStore = new InMemorySessionStore();
 
+const { InMemoryMessageStore } = require("./messageStore");
+const messageStore = new InMemoryMessageStore();
+
 // Set static folder
 app.use(express.static(path.join(__dirname, "public")));
 
@@ -27,7 +30,7 @@ io.use((socket, next) => {
     }
   }
   const username = socket.handshake.auth.username;
-
+  console.log(username);
   if (!username) {
     return next(new Error("invalid username"));
   }
@@ -58,13 +61,28 @@ io.on("connection", (socket) => {
 
   // fetch existing users
   const users = [];
+  const messagesPerUser = new Map();
 
+  messageStore.findMessagesForUser(socket.userID).forEach((message) => {
+    console.log(message);
+    const { from, to } = message;
+    const otherUser = socket.userID === from ? to : from;
+    if (messagesPerUser.has(otherUser)) {
+      messagesPerUser.get(otherUser).push(message);
+    } else {
+      messagesPerUser.set(otherUser, [message]);
+    }
+  });
+  console.log(sessionStore.findAllSessions());
   sessionStore.findAllSessions().forEach((session) => {
     users.push({
       userID: session.userID,
       username: session.username,
       connected: session.connected,
+      messages: messagesPerUser.get(session.userID) || [],
     });
+    console.log(users);
+    socket.emit("users", users);
   });
   // for (let [id, socket] of io.of("/").sockets) {
   //   users.push({
@@ -72,31 +90,32 @@ io.on("connection", (socket) => {
   //     username: socket.username,
   //   });
   // }
-  console.log(users);
-  socket.emit("users", users);
 
   // notify existing users
   socket.broadcast.emit("user connected", {
     userID: socket.userID,
     username: socket.username,
     connected: true,
+    messages: [],
   });
 
   socket.on("private message", ({ content, to }) => {
-    socket.to(to).to(socket.userID).emit("private message", {
+    const message = {
       content,
       from: socket.userID,
       to,
-    });
+    };
+
+    socket.to(to).to(socket.userID).emit("private message", message);
+    messageStore.saveMessage(message);
   });
 
   // notify users upon disconnection
   socket.on("disconnect", async () => {
     const matchingSockets = await io.in(socket.userID).allSockets();
     const isDisconnected = matchingSockets.size === 0;
-
     if (isDisconnected) {
-      //notify other users
+      // notify other users
       socket.broadcast.emit("user disconnected", socket.userID);
       // update the connection status of the session
       sessionStore.saveSession(socket.sessionID, {

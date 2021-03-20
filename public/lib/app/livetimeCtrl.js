@@ -71,15 +71,18 @@ var livetimeCtrl = function (
         if (user.self) {
           user.connected = true;
         }
+        $scope.$apply();
       });
     });
 
     socket.on("disconnect", () => {
+      alert("bye");
       $scope.users.forEach((user) => {
         if (user.self) {
           user.connected = false;
         }
       });
+      $scope.$apply();
     });
     $scope.initReactiveProperties = function (user) {
       user.messages = [];
@@ -88,24 +91,29 @@ var livetimeCtrl = function (
 
     socket.on("users", (users) => {
       users.forEach((user) => {
+        user.messages.forEach((message) => {
+          message.fromSelf = message.from === socket.userID;
+        });
         for (let i = 0; i < $scope.users.length; i++) {
-          const existingUsers = $scope.users[i];
-          if (existingUsers.userID === user.userID) {
-            existingUsers.connected = user.connected;
+          const existingUser = $scope.users[i];
+          if (existingUser.userID === user.userID) {
+            existingUser.connected = user.connected;
+            existingUser.messages = user.messages;
             return;
           }
         }
         user.self = user.userID === socket.userID;
-        $scope.initReactiveProperties(user);
         $scope.users.push(user);
+        $scope.$apply();
       });
       // put the current user first, and sort by username
-      $scope.users = users.sort((a, b) => {
+      $scope.users.sort((a, b) => {
         if (a.self) return -1;
         if (b.self) return 1;
         if (a.username < b.username) return -1;
         return a.username > b.username ? 1 : 0;
       });
+
       $scope.$apply();
     });
 
@@ -117,9 +125,9 @@ var livetimeCtrl = function (
           return;
         }
       }
+      console.log(user);
       $scope.initReactiveProperties(user);
       $scope.users.push(user);
-      console.log($scope.users);
       $scope.$apply();
     });
 
@@ -131,6 +139,7 @@ var livetimeCtrl = function (
           break;
         }
       }
+      $scope.$apply();
     });
 
     socket.on("private message", ({ content, from, to }) => {
@@ -144,7 +153,6 @@ var livetimeCtrl = function (
           });
           if (user !== this.selectedUser) {
             user.hasNewMessages = true;
-            $scope.$apply();
           }
           break;
         }
@@ -160,15 +168,15 @@ var livetimeCtrl = function (
       });
     };
 
-    $scope.$onDestroy = function () {
-      socket.off("connect");
-      socket.off("disconnect");
-      socket.off("users");
-      socket.off("user connected");
-      socket.off("user disconnected");
-      socket.off("private message");
-      socket.off("connect_error");
-    };
+    // $scope.$onDestroy = function () {
+    //   socket.off("connect");
+    //   socket.off("disconnect");
+    //   socket.off("users");
+    //   socket.off("user connected");
+    //   socket.off("user disconnected");
+    //   socket.off("private message");
+    //   socket.off("connect_error");
+    // };
   };
 
   $scope.livetime();
