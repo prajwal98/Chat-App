@@ -14,7 +14,7 @@ var livetimeCtrl = function (
       $crypto.decrypt(localStorage.getItem("786a2y1e"), config.key)
     );
 
-    $scope.decry["activemenu"] = "livetime";
+    
     localStorage.setItem(
       "786a2y1e",
       $crypto.encrypt(JSON.stringify($scope.decry), config.key)
@@ -76,7 +76,7 @@ var livetimeCtrl = function (
     });
 
     socket.on("disconnect", () => {
-      alert("bye");
+     
       $scope.users.forEach((user) => {
         if (user.self) {
           user.connected = false;
